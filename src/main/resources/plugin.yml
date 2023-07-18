@@ -1,0 +1,4 @@
+name: CanecaLiberarBot
+main: me.caneca.liberarbot.Main
+version: '1.0'
+author: caneca
