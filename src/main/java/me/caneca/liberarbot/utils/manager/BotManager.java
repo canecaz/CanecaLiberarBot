@@ -16,7 +16,7 @@ public class BotManager {
 
     public void start(Cache cache) {
         try {
-            jda = JDABuilder.createDefault("MTEyNTI1NzA4MDU4MDg4MjQ5NA.GJIp2W.7xP5yhja7i-0DU_GWslcr5PVJP_Qg7RlvICHIk")
+            jda = JDABuilder.createDefault(Token.TOKEN)
                     .enableIntents(GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_MEMBERS).build();
             jda.addEventListener(new DiscordListeners(cache));
         } catch (LoginException e) {
