@@ -1,4 +1,4 @@
-package me.caneca.liberarbot.plugin;
+package me.caneca.liberarbot.plugin.listeners;
 
 import me.caneca.liberarbot.utils.cache.Cache;
 import me.caneca.liberarbot.utils.objects.AllowPlayer;

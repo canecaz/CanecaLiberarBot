@@ -18,9 +18,12 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         reloadConfig();
+
         Cache cache = new Cache();
+
         botManager = new BotManager();
         botManager.start(cache);
+
         new CacheLoader(getConfig(), cache);
         new Loader(this, cache);
     }

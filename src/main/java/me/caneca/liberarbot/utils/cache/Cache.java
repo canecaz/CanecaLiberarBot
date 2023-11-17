@@ -5,11 +5,14 @@ import me.caneca.liberarbot.Main;
 import me.caneca.liberarbot.utils.objects.AllowPlayer;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @Getter
 public class Cache {
 
+    private final Set<String> requireAuthentication = new HashSet<>();
     private final Map<String, String> lastIPs = new HashMap<>();
     private final Map<String, AllowPlayer> allow = new HashMap<>();
 

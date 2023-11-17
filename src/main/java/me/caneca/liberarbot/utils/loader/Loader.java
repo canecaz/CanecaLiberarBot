@@ -1,7 +1,8 @@
 package me.caneca.liberarbot.utils.loader;
 
 import me.caneca.liberarbot.Main;
-import me.caneca.liberarbot.plugin.PlayerPreJoinListener;
+import me.caneca.liberarbot.plugin.commands.LiberarCommand;
+import me.caneca.liberarbot.plugin.listeners.PlayerPreJoinListener;
 import me.caneca.liberarbot.utils.cache.Cache;
 
 public class Loader {
@@ -12,11 +13,17 @@ public class Loader {
     public Loader(Main main, Cache cache) {
         this.main = main;
         this.cache = cache;
+
         loadListeners();
+        loadCommands();
     }
 
-    public void loadListeners() {
+    private void loadListeners() {
         new PlayerPreJoinListener(main, cache);
+    }
+
+    private void loadCommands() {
+        new LiberarCommand(main, cache);
     }
 
 }

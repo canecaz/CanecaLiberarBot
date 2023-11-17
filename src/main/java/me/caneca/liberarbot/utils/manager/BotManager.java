@@ -1,7 +1,7 @@
 package me.caneca.liberarbot.utils.manager;
 
 import lombok.Getter;
-import me.caneca.liberarbot.plugin.DiscordListeners;
+import me.caneca.liberarbot.plugin.listeners.DiscordListeners;
 import me.caneca.liberarbot.utils.cache.Cache;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;

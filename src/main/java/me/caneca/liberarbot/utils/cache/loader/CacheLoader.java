@@ -6,9 +6,14 @@ import org.bukkit.configuration.file.FileConfiguration;
 public class CacheLoader {
 
     public CacheLoader(FileConfiguration config, Cache cache) {
-        if (!config.contains("ips")) return;
         cache.getLastIPs().clear();
-        config.getConfigurationSection("ips").getKeys(false).forEach(key ->
+        cache.getRequireAuthentication().clear();
+
+        if (config.contains("require-authentication"))
+            cache.getRequireAuthentication().addAll(config.getStringList("require-authentication"));
+
+        if (config.contains("ips"))
+            config.getConfigurationSection("ips").getKeys(false).forEach(key ->
                 cache.getLastIPs().put(key, config.getString("ips." + key)));
     }
 }
